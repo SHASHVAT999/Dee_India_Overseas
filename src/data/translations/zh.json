@@ -1,0 +1,72 @@
+{
+    "Index": {
+        "title": "欢迎体验尊贵",
+        "subtitle": "探索为未来打造的汽车奢华体验。",
+        "cta": "探索车型"
+    },
+    "Navigation": {
+        "home": "首页",
+        "about": "关于我们",
+        "contact": "联系我们",
+        "products": "我们产品",
+        "tyres": "轮胎",
+        "quality": "四维质量"
+    },
+    "Footer": {
+        "rights": "版权所有。",
+        "trusted": "深受 40 多个国家/地区的 500 多家国际客户的信赖。",
+        "newsletter": "订阅我们的时事通讯，获取工程见解。",
+        "placeholder": "输入您的电子邮件",
+        "subscribe": "订阅",
+        "links": "快速链接",
+        "legal": "法律"
+    },
+    "Common": {
+        "explore": "探索",
+        "view_collection": "查看系列",
+        "learn_more": "了解更多",
+        "read_more": "阅读更多"
+    },
+    "Home": {
+        "hero_headline_1": "卓越的",
+        "hero_headline_2": "工程技术",
+        "hero_sub": "自1985年以来为全球市场提供优质汽车零部件。",
+        "hero_cta_1": "浏览我们的目录",
+        "hero_cta_2": "我们的历史",
+        "scroll": "滑动以探索",
+        "stats_1": "500+ 国际合作伙伴",
+        "stats_2": "40+ 国家",
+        "stats_3": "出口1000万+ 零部件",
+        "expertise_title": "我们的",
+        "expertise_subtitle": "专业知识",
+        "featured_title": "精密",
+        "featured_subtitle": "制造",
+        "drag": "拖动探索",
+        "partners": "官方合作伙伴",
+        "mfg_eyebrow": "40年卓越成就",
+        "mfg_title_1": "从愿景",
+        "mfg_title_2": "到精准",
+        "mfg_p1": "我们的制造设施代表了工业冶金和精密加工的顶峰。 每个部件都经过严格的公差测试。",
+        "mfg_p2": "我们不只是制造零件；我们设计的可靠性每天都推动着全球数百万辆汽车。",
+        "mfg_cta": "了解我们的流程",
+        "commitment": "我们的承诺",
+        "integrity_1": "工程",
+        "integrity_2": "诚信",
+        "qa_title": "质量保证",
+        "qa_desc": "每个组件在放行之前都会经过 100% 自动光学检测和冶金应力测试。",
+        "innov_title": "材料创新",
+        "innov_desc": "开创轻质合金和高级复合材料的先河，在减轻质量的同时呈指数级提高拉伸强度。",
+        "global_title": "全球标准",
+        "global_desc": "通过了针对国际市场的认证，超出了 TUV、DOT 和专业 OEM 制造要求。",
+        "reach_title": "全球影响力",
+        "reach_desc": "向全球 40 多个国家/地区的制造中心运送精密部件。",
+        "cta_title_1": "准备好",
+        "cta_title_2": "合作了吗？",
+        "cta_desc": "为您的企业制造需求获取定制的精密工程报价。",
+        "cta_btn": "请求报价"
+    },
+    "SEO": {
+        "title": "优质汽车零部件出口商 | Dee India Overseas",
+        "description": "Dee India Overseas: 自1985年以来，向40多个国家/地区出口优质高公差汽车零部件，摩托车零件和三轮车系统。"
+    }
+}

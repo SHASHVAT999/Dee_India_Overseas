@@ -1,0 +1,72 @@
+{
+    "Index": {
+        "title": "Welcome to the Premium Experience",
+        "subtitle": "Discover automotive luxury engineered for the future.",
+        "cta": "Explore Models"
+    },
+    "Navigation": {
+        "home": "Home",
+        "about": "Our Story",
+        "contact": "Contact",
+        "products": "Products",
+        "tyres": "Tyres",
+        "quality": "Quality Quad"
+    },
+    "Footer": {
+        "rights": "All rights reserved.",
+        "trusted": "Trusted by 500+ international clients across 40+ countries.",
+        "newsletter": "Join our newsletter for engineering insights.",
+        "placeholder": "Enter your email address",
+        "subscribe": "Subscribe",
+        "links": "Quick Links",
+        "legal": "Legal"
+    },
+    "Common": {
+        "explore": "Explore",
+        "view_collection": "View Collection",
+        "learn_more": "Learn More",
+        "read_more": "Read More"
+    },
+    "Home": {
+        "hero_headline_1": "ENGINEERING",
+        "hero_headline_2": "EXCELLENCE",
+        "hero_sub": "Premium automotive parts for global markets since 1985.",
+        "hero_cta_1": "Explore Catalogue",
+        "hero_cta_2": "Our Story",
+        "scroll": "Scroll to discover",
+        "stats_1": "500+ International Partners",
+        "stats_2": "40+ Countries",
+        "stats_3": "10M+ Parts Exported",
+        "expertise_title": "Our",
+        "expertise_subtitle": "Expertise",
+        "featured_title": "Precision",
+        "featured_subtitle": "Engineered",
+        "drag": "Drag to explore",
+        "partners": "Official Partners",
+        "mfg_eyebrow": "40 Years of Excellence",
+        "mfg_title_1": "From Vision",
+        "mfg_title_2": "to Precision",
+        "mfg_p1": "Our manufacturing facilities represent the pinnacle of industrial metallurgy and precision machining. Every component is subjected to rigorous tolerance testing.",
+        "mfg_p2": "We don't just manufacture parts; we engineer reliability that moves millions of vehicles globally every single day.",
+        "mfg_cta": "Discover Our Process",
+        "commitment": "Our Commitment",
+        "integrity_1": "Engineering",
+        "integrity_2": "Integrity",
+        "qa_title": "Quality Assurance",
+        "qa_desc": "Every component undergoes 100% automated optical inspection and metallurgical stress testing before clearance.",
+        "innov_title": "Material Innovation",
+        "innov_desc": "Pioneering lightweight alloys and advanced composites to reduce mass while exponentially increasing tensile strength.",
+        "global_title": "Global Standards",
+        "global_desc": "Homologated for international markets, exceeding TUV, DOT, and specialized OEM manufacturing requirements.",
+        "reach_title": "Global Presence",
+        "reach_desc": "Shipping precision components to manufacturing hubs across 40+ countries worldwide.",
+        "cta_title_1": "Ready to",
+        "cta_title_2": "Partner?",
+        "cta_desc": "Get a customized precision engineering quote for your enterprise manufacturing needs.",
+        "cta_btn": "Request Quote"
+    },
+    "SEO": {
+        "title": "Premium Automotive Parts Exporter | Dee India Overseas",
+        "description": "Dee India Overseas: Exporting premium high-tolerance automotive components, motorcycle parts, and 3-wheeler systems across 40+ countries since 1985."
+    }
+}

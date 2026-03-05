@@ -1,0 +1,72 @@
+{
+    "Index": {
+        "title": "Bienvenido a la Experiencia Premium",
+        "subtitle": "Descubre el lujo automotriz diseñado para el futuro.",
+        "cta": "Explorar Modelos"
+    },
+    "Navigation": {
+        "home": "Inicio",
+        "about": "Nuestra Historia",
+        "contact": "Contacto",
+        "products": "Productos",
+        "tyres": "Neumáticos",
+        "quality": "Calidad Quad"
+    },
+    "Footer": {
+        "rights": "Todos los derechos reservados.",
+        "trusted": "Con la confianza de más de 500 clientes internacionales en más de 40 países.",
+        "newsletter": "Únase a nuestro boletín para obtener información sobre ingeniería.",
+        "placeholder": "Ingrese su correo electrónico",
+        "subscribe": "Suscribirse",
+        "links": "Enlaces Rápidos",
+        "legal": "Legal"
+    },
+    "Common": {
+        "explore": "Explorar",
+        "view_collection": "Ver Colección",
+        "learn_more": "Aprender Más",
+        "read_more": "Leer Más"
+    },
+    "Home": {
+        "hero_headline_1": "EXCELENCIA EN",
+        "hero_headline_2": "INGENIERÍA",
+        "hero_sub": "Repuestos automotrices premium para mercados globales desde 1985.",
+        "hero_cta_1": "Explorar Catálogo",
+        "hero_cta_2": "Nuestra Historia",
+        "scroll": "Desplácese",
+        "stats_1": "500+ Socios Internacionales",
+        "stats_2": "40+ Países",
+        "stats_3": "10M+ Piezas Exportadas",
+        "expertise_title": "Nuestra",
+        "expertise_subtitle": "Experiencia",
+        "featured_title": "Ingeniería",
+        "featured_subtitle": "De Precisión",
+        "drag": "Arrastrar para explorar",
+        "partners": "Socios Oficiales",
+        "mfg_eyebrow": "40 Años de Excelencia",
+        "mfg_title_1": "De la Visión",
+        "mfg_title_2": "a la Precisión",
+        "mfg_p1": "Nuestras instalaciones de fabricación representan el pináculo de la metalurgia industrial y el mecanizado de precisión. Cada componente se somete a rigurosas pruebas de tolerancia.",
+        "mfg_p2": "No solo fabricamos piezas; diseñamos confiabilidad que mueve millones de vehículos a nivel mundial todos los días.",
+        "mfg_cta": "Descubra Nuestro Proceso",
+        "commitment": "Nuestro Compromiso",
+        "integrity_1": "Integridad",
+        "integrity_2": "En Ingeniería",
+        "qa_title": "Garantía de Calidad",
+        "qa_desc": "Cada componente se somete al 100% de inspección óptica automatizada y pruebas de estrés metalúrgico antes de su aprobación.",
+        "innov_title": "Innovación de Materiales",
+        "innov_desc": "Pioneros en aleaciones ligeras y compuestos avanzados para reducir la masa al tiempo que aumenta exponencialmente la resistencia a la tracción.",
+        "global_title": "Estándares Globales",
+        "global_desc": "Homologado para mercados internacionales, superando los requisitos de fabricación de TUV, DOT y OEM especializados.",
+        "reach_title": "Presencia Global",
+        "reach_desc": "Enviando componentes de precisión a centros de fabricación en más de 40 países.",
+        "cta_title_1": "¿Listo para",
+        "cta_title_2": "Asociarse?",
+        "cta_desc": "Obtenga un presupuesto de ingeniería de precisión personalizado para sus necesidades de fabricación.",
+        "cta_btn": "Solicitar Presupuesto"
+    },
+    "SEO": {
+        "title": "Exportador Premium de Autopartes | Dee India Overseas",
+        "description": "Dee India Overseas: Exportando componentes automotrices de alta tolerancia premium, piezas de motocicletas y sistemas de 3 ruedas a más de 40 países desde 1985."
+    }
+}
