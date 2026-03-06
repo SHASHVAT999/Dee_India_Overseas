@@ -1,53 +1,35 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
-import { ArrowUpRight } from "lucide-react";
-
-const categories = [
-    { name: "Engine Valves", slug: "engine-valves", desc: "Intake and exhaust valves for motorcycles, three-wheelers, and commercial vehicles." },
-    { name: "Clutch Parts", slug: "clutch-parts", desc: "Clutch plates, hubs, and assemblies for smooth power transmission." },
-    { name: "Brake Systems", slug: "brake-systems", desc: "Brake shoes, drums, and hydraulic components for reliable stopping power." },
-    { name: "Inner Tubes", slug: "inner-tubes", desc: "High-quality butyl rubber inner tubes for two-wheelers and commercial use." },
-    { name: "Suspension", slug: "suspension", desc: "Shock absorbers and suspension components for ride stability." },
-];
+import { CategoryWheel } from "@/components/ui/CategoryWheel";
 
 export default function ProductsPage() {
     return (
-        <main>
-            <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-background">
-                <div className="max-w-container mx-auto px-6 md:px-8">
-                    <p className="text-xs font-medium text-stone-400 uppercase tracking-wider mb-4">Products</p>
-                    <h1 className="text-h1 text-foreground max-w-2xl">
-                        Product Categories
-                    </h1>
-                    <p className="text-stone-500 mt-4 max-w-lg">
-                        Explore our range of precision-engineered automotive components.
-                    </p>
-                </div>
-            </section>
+        <main className="bg-background min-h-screen flex flex-col pt-24 pb-16 relative overflow-hidden">
+            {/* Blueprint lines for depth */}
+            <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0 pointer-events-none" />
+            <div className="absolute top-0 right-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0 pointer-events-none" />
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-stone-200/20 z-0 pointer-events-none" />
 
-            <section className="py-16 md:py-24 bg-white border-t border-stone-100">
-                <div className="max-w-container mx-auto px-6 md:px-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {categories.map((cat) => (
-                            <Link key={cat.slug} href={`/products/${cat.slug}`}>
-                                <div className="group h-full bg-stone-50 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300 p-8">
-                                    <div className="w-12 h-12 rounded-xl bg-stone-200 mb-6" />
-                                    <h3 className="text-base font-semibold text-foreground mb-2 group-hover:text-stone-600 transition-colors">
-                                        {cat.name}
-                                    </h3>
-                                    <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                                        {cat.desc}
-                                    </p>
-                                    <span className="inline-flex items-center gap-1 text-xs font-medium text-stone-400 group-hover:text-stone-600 transition-colors">
-                                        View products <ArrowUpRight size={12} />
-                                    </span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Header Content */}
+            <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 relative z-10 pt-10 text-center flex flex-col items-center">
+                <p className="text-xs font-medium text-accent flex items-center justify-center gap-4 uppercase tracking-wider mb-6">
+                    <span className="w-8 h-[1px] bg-accent"></span> Premium Catalog
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-foreground mb-4 leading-none">
+                    EXPLORE<span className="text-accent">.</span>
+                </h1>
+                <p className="text-stone-500 max-w-lg mx-auto text-sm md:text-base">
+                    Interact with the wheel below to navigate our precision-engineered automotive product categories.
+                </p>
+            </div>
+
+            {/* The Circular Nav Hero */}
+            <div className="flex-1 w-full flex items-center justify-center relative z-20 mt-8 mb-16 md:mb-0 md:mt-16">
+                <CategoryWheel />
+            </div>
+
+            {/* Background Aesthetic Flourishes */}
+            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-stone-50 to-transparent z-0 pointer-events-none" />
         </main>
     );
 }

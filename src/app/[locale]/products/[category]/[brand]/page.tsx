@@ -32,8 +32,11 @@ export default function BrandPage({
                         <span className="text-foreground font-medium">{brand.name}</span>
                     </div>
 
+                    <p className="text-xs font-medium text-accent flex items-center gap-4 uppercase tracking-wider mb-4 mt-8">
+                        <span className="w-8 h-[1px] bg-accent"></span> Brand
+                    </p>
                     <h1 className="text-h1 text-foreground mb-2">
-                        {brand.name}
+                        {brand.name}<span className="text-accent">.</span>
                     </h1>
                     <p className="text-stone-500">Select a model to view available parts.</p>
                 </div>
@@ -74,11 +77,11 @@ export default function BrandPage({
                                             <span className="text-xs text-stone-400 mb-1 block">
                                                 {model.products.length} {model.products.length === 1 ? "Part" : "Parts"}
                                             </span>
-                                            <h3 className="text-base font-semibold text-foreground mb-1 group-hover:text-stone-600 transition-colors">
+                                            <h3 className="text-base font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
                                                 {model.name}
                                             </h3>
-                                            <span className="text-xs text-stone-400 flex items-center gap-1">
-                                                View Parts <ArrowUpRight size={12} />
+                                            <span className="text-xs text-stone-400 group-hover:text-stone-600 flex items-center gap-1 transition-colors">
+                                                View Parts <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
                                             </span>
                                         </div>
                                     </div>

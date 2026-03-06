@@ -26,11 +26,11 @@ export default function CategoryPage({
                     >
                         ← Back to Products
                     </Link>
-                    <p className="text-xs font-medium text-stone-400 uppercase tracking-wider mb-4">
-                        Category
+                    <p className="text-xs font-medium text-accent flex items-center gap-4 uppercase tracking-wider mb-4">
+                        <span className="w-8 h-[1px] bg-accent"></span> Category
                     </p>
                     <h1 className="text-h1 text-foreground mb-4">
-                        {category.name[currentLocale]}
+                        {category.name[currentLocale]}<span className="text-accent">.</span>
                     </h1>
                     <p className="text-stone-500 max-w-2xl">
                         {category.description[currentLocale]}
@@ -69,11 +69,11 @@ export default function CategoryPage({
                                             )}
                                         </div>
                                         <div className="p-5">
-                                            <h2 className="text-base font-semibold text-foreground mb-1 group-hover:text-stone-600 transition-colors">
+                                            <h2 className="text-base font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
                                                 {brand.name}
                                             </h2>
-                                            <span className="text-xs text-stone-400 flex items-center gap-1">
-                                                View Models <ArrowUpRight size={12} />
+                                            <span className="text-xs text-stone-400 group-hover:text-stone-600 flex items-center gap-1 transition-colors">
+                                                View Models <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
                                             </span>
                                         </div>
                                     </div>

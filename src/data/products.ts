@@ -9,13 +9,44 @@ export const CATALOG_DATA: Category[] = [
             es: "Componentes para Motocicletas",
             zh: "摩托车部件"
         },
-        slug: "motorcycle-components",
+        slug: "motorcycle-parts",
         description: {
             en: "Precision-engineered critical systems for high-performance two-wheelers.",
             es: "Sistemas críticos de ingeniería de precisión para vehículos de dos ruedas de alto rendimiento.",
             zh: "专为高性能两轮车设计的精密关键系统。"
         },
         brands: [
+            {
+                id: "brand_bajaj",
+                name: "Bajaj",
+                slug: "bajaj",
+                models: [
+                    {
+                        id: "mod_pulsar200",
+                        name: "Pulsar RS200",
+                        slug: "pulsar-rs200",
+                        brand: "bajaj",
+                        products: [
+                            {
+                                id: "prod_brk_p200",
+                                name: { en: "Sintered Brake Pads", es: "Pastillas de freno sinterizadas", zh: "烧结刹车片" },
+                                slug: "sintered-brake-pads-rs200",
+                                images: ["https://images.unsplash.com/photo-1600706432502-77a0e2e32729?q=80&w=1000&auto=format&fit=crop"],
+                                category: "motorcycle-parts",
+                                brand: "bajaj",
+                                model: "pulsar-rs200",
+                                featured: true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: "brand_tvs_mc",
+                name: "TVS",
+                slug: "tvs",
+                models: []
+            },
             {
                 id: "brand_yamaha",
                 name: "Yamaha",
@@ -33,7 +64,7 @@ export const CATALOG_DATA: Category[] = [
                                 name: { en: "Titanium Engine Valve Set", es: "Juego de válvulas de motor de titanio", zh: "钛合金发动机气门组" },
                                 slug: "titanium-engine-valve-set-r15",
                                 images: ["https://images.unsplash.com/photo-1486262715619-679ce42fb928?q=80&w=1000&auto=format&fit=crop"],
-                                category: "motorcycle-components",
+                                category: "motorcycle-parts",
                                 brand: "yamaha",
                                 model: "yzf-r15",
                                 specifications: { "Material": "Grade 5 Titanium", "Weight": "14g (Intake)", "Tolerance": "±0.002mm" },
@@ -44,7 +75,7 @@ export const CATALOG_DATA: Category[] = [
                                 name: { en: "Performance Clutch Assembly", es: "Conjunto de embrague de rendimiento", zh: "高性能离合器总成" },
                                 slug: "performance-clutch-assembly-r15",
                                 images: ["https://images.unsplash.com/photo-1558981359-219d6364c9c8?q=80&w=1000&auto=format&fit=crop"],
-                                category: "motorcycle-components",
+                                category: "motorcycle-parts",
                                 brand: "yamaha",
                                 model: "yzf-r15",
                                 featured: false
@@ -61,29 +92,28 @@ export const CATALOG_DATA: Category[] = [
                 ]
             },
             {
-                id: "brand_bajaj",
-                name: "Bajaj",
-                slug: "bajaj",
-                models: [
-                    {
-                        id: "mod_pulsar200",
-                        name: "Pulsar RS200",
-                        slug: "pulsar-rs200",
-                        brand: "bajaj",
-                        products: [
-                            {
-                                id: "prod_brk_p200",
-                                name: { en: "Sintered Brake Pads", es: "Pastillas de freno sinterizadas", zh: "烧结刹车片" },
-                                slug: "sintered-brake-pads-rs200",
-                                images: ["https://images.unsplash.com/photo-1600706432502-77a0e2e32729?q=80&w=1000&auto=format&fit=crop"],
-                                category: "motorcycle-components",
-                                brand: "bajaj",
-                                model: "pulsar-rs200",
-                                featured: true
-                            }
-                        ]
-                    }
-                ]
+                id: "brand_hero",
+                name: "Hero",
+                slug: "hero",
+                models: []
+            },
+            {
+                id: "brand_honda_mc",
+                name: "Honda",
+                slug: "honda",
+                models: []
+            },
+            {
+                id: "brand_lml",
+                name: "LML",
+                slug: "lml",
+                models: []
+            },
+            {
+                id: "brand_suzuki",
+                name: "Suzuki",
+                slug: "suzuki",
+                models: []
             }
         ]
     },
@@ -102,15 +132,21 @@ export const CATALOG_DATA: Category[] = [
         },
         brands: [
             {
-                id: "brand_tvs",
+                id: "brand_bajaj_tw",
+                name: "Bajaj",
+                slug: "bajaj-tw",
+                models: []
+            },
+            {
+                id: "brand_tvs_tw",
                 name: "TVS",
-                slug: "tvs",
+                slug: "tvs-tw",
                 models: [
                     {
                         id: "mod_king",
                         name: "TVS King",
                         slug: "tvs-king",
-                        brand: "tvs",
+                        brand: "tvs-tw",
                         products: [
                             {
                                 id: "prod_axl_king",
@@ -118,13 +154,65 @@ export const CATALOG_DATA: Category[] = [
                                 slug: "heavy-duty-rear-axle-tvs-king",
                                 images: ["https://images.unsplash.com/photo-1569426989668-d06e2ec6f437?q=80&w=1000&auto=format&fit=crop"],
                                 category: "three-wheeler-systems",
-                                brand: "tvs",
+                                brand: "tvs-tw",
                                 model: "tvs-king",
                                 featured: true
                             }
                         ]
                     }
                 ]
+            },
+            {
+                id: "brand_piaggio",
+                name: "Piaggio",
+                slug: "piaggio",
+                models: []
+            }
+        ]
+    },
+    {
+        id: "cat_scooter",
+        name: {
+            en: "Scooter Parts",
+            es: "Partes de Scooter",
+            zh: "踏板车配件"
+        },
+        slug: "scooter-parts",
+        description: {
+            en: "Reliable and high-performance components suitable for a wide range of scooters.",
+            es: "Componentes confiables y de alto rendimiento aptos para una amplia gama de scooters.",
+            zh: "适用于各种踏板车的可靠高性能组件。"
+        },
+        brands: [
+            {
+                id: "brand_bajaj_chetak",
+                name: "Bajaj Chetak",
+                slug: "bajaj-chetak",
+                models: []
+            },
+            {
+                id: "brand_tvs_jupiter",
+                name: "TVS Jupiter",
+                slug: "tvs-jupiter",
+                models: []
+            },
+            {
+                id: "brand_lml_vespa",
+                name: "LML Vespa",
+                slug: "lml-vespa",
+                models: []
+            },
+            {
+                id: "brand_lambretta",
+                name: "Lambretta",
+                slug: "lambretta",
+                models: []
+            },
+            {
+                id: "brand_lml_star",
+                name: "LML Star",
+                slug: "lml-star",
+                models: []
             }
         ]
     },
@@ -143,15 +231,21 @@ export const CATALOG_DATA: Category[] = [
         },
         brands: [
             {
-                id: "brand_universal",
-                name: "Universal Fitment",
-                slug: "universal",
+                id: "brand_three_wheeler",
+                name: "Three Wheeler",
+                slug: "three-wheeler",
+                models: []
+            },
+            {
+                id: "brand_tubes",
+                name: "Tubes",
+                slug: "tubes",
                 models: [
                     {
                         id: "mod_all",
                         name: "All Models",
                         slug: "all-models",
-                        brand: "universal",
+                        brand: "tubes",
                         products: [
                             {
                                 id: "prod_tube_butyl",
@@ -159,50 +253,9 @@ export const CATALOG_DATA: Category[] = [
                                 slug: "premium-butyl-inner-tube-17",
                                 images: ["https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1000&auto=format&fit=crop"],
                                 category: "inner-tubes-and-tyres",
-                                brand: "universal",
+                                brand: "tubes",
                                 model: "all-models",
                                 featured: false
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        id: "cat_valves",
-        name: {
-            en: "Engine Valves",
-            es: "Válvulas de motor",
-            zh: "发动机气门"
-        },
-        slug: "engine-valves",
-        description: {
-            en: "Bimetallic and nitrided valves for supreme thermal resistance.",
-            es: "Válvulas bimetálicas y nitruradas para una suprema resistencia térmica.",
-            zh: "双金属和氮化气门，具有极高的耐热性。"
-        },
-        brands: [
-            {
-                id: "brand_honda",
-                name: "Honda",
-                slug: "honda",
-                models: [
-                    {
-                        id: "mod_cg125",
-                        name: "CG 125",
-                        slug: "cg-125",
-                        brand: "honda",
-                        products: [
-                            {
-                                id: "prod_vlv_cg125",
-                                name: { en: "Nitrided Exhaust Valve", es: "Válvula de escape nitrurada", zh: "氮化排气门" },
-                                slug: "nitrided-exhaust-valve-cg125",
-                                images: ["https://images.unsplash.com/photo-1486262715619-679ce42fb928?q=80&w=1000&auto=format&fit=crop"],
-                                category: "engine-valves",
-                                brand: "honda",
-                                model: "cg-125",
-                                featured: true
                             }
                         ]
                     }
