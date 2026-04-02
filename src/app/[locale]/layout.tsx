@@ -10,6 +10,7 @@ import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollGlows } from "@/components/ui/ScrollGlows";
 import "../globals.css";
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -94,6 +95,7 @@ export default async function LocaleLayout({
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <NextIntlClientProvider messages={messages} locale={locale}>
+                <ScrollGlows />
                 <ScrollProgress />
 
                 <Header />

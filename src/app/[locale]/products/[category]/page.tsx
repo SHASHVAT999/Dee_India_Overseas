@@ -1,3 +1,5 @@
+"use client";
+
 import { getCategoryBySlug, Locale } from "@/data/helpers";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -18,7 +20,7 @@ export default function CategoryPage({
 
     return (
         <main>
-            <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-background">
+            <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-background relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     <Link
                         href="/products"
@@ -38,7 +40,7 @@ export default function CategoryPage({
                 </div>
             </section>
 
-            <section className="py-16 md:py-24 bg-white border-t border-stone-100">
+            <section className="py-16 md:py-24 bg-stone-900/40 backdrop-blur-md border-y border-stone-800 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     {category.brands.length === 0 ? (
                         <p className="text-stone-400">No brands listed yet.</p>
@@ -50,29 +52,29 @@ export default function CategoryPage({
                                     href={`/products/${category.slug}/${brand.slug}`}
                                     className="group block"
                                 >
-                                    <div className="bg-stone-50 rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
-                                        <div className="relative h-48 bg-stone-100 overflow-hidden">
+                                    <div className="bg-stone-800/50 rounded-xl overflow-hidden border border-transparent hover:border-stone-700 transition-colors duration-300">
+                                        <div className="relative h-48 bg-stone-900/80 flex items-center justify-center overflow-hidden">
                                             {brand.logo ? (
                                                 <Image
                                                     src={brand.logo}
                                                     alt={brand.name}
                                                     fill
                                                     sizes="(max-width: 768px) 100vw, 33vw"
-                                                    className="object-cover"
+                                                    className="object-contain p-8 mix-blend-lighten"
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center">
-                                                    <span className="text-4xl font-semibold text-stone-300">
+                                                    <span className="text-4xl font-semibold text-stone-700">
                                                         {brand.name[0]}
                                                     </span>
                                                 </div>
                                             )}
                                         </div>
-                                        <div className="p-5">
+                                        <div className="p-5 border-t border-stone-800">
                                             <h2 className="text-base font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
                                                 {brand.name}
                                             </h2>
-                                            <span className="text-xs text-stone-400 group-hover:text-stone-600 flex items-center gap-1 transition-colors">
+                                            <span className="text-xs text-stone-400 group-hover:text-stone-200 flex items-center gap-1 transition-colors">
                                                 View Models <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
                                             </span>
                                         </div>

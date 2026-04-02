@@ -4,21 +4,22 @@
 > **This project is currently UNDER DEVELOPMENT.**
 > Features, design, and architecture are subject to change without notice.
 
-A high-performance, cinematic Next.js 14 Web Application built for an international automotive B2B enterprise. Designed with a strict "dark automotive luxury" aesthetic, extensive micro-interactions, and robust multilingual capabilities.
+A high-performance Next.js 14 Web Application built for an international automotive B2B enterprise. Designed with a sleek, "Dark Blueprint" technical aesthetic utilizing deep backgrounds, scrolling ambient glows, and robust multilingual capabilities. The site is structured to progressively feel more like an engineering terminal the deeper you dive into the product catalog.
 
 ## Tech Stack
 *   **Framework**: Next.js 14 (App Router)
 *   **Styling**: Tailwind CSS + shadcn/ui (customized)
-*   **Animations**: Framer Motion & Embla Carousel
+*   **Animations**: Framer Motion
+*   **Mapping**: `react-simple-maps`, `d3-geo`, and `topojson-client`
 *   **Internationalization**: `next-intl`
 *   **Language Support**: English (en), Spanish (es), Chinese (zh)
 
 ## Key Features
-1.  **Cinematic Performance**: Relies heavily on custom `cubic-bezier` timing functions combined with Framer Motion scroll and viewport tracking for smooth, organic element entries.
-2.  **Multilingual Architecture**: Dynamic routing across `[locale]`, driven by deep translation matrixes mapping over 200 custom text nodes.
-3.  **Dynamic Mega Menu**: Complex 12-column architecture featuring bespoke sub-category breakdowns with custom hover micro-interactions.
-4.  **B2B Catalog Simulation**: A static-generated deep-linked catalog structured precisely: `Category -> Brand -> Model -> Product Specifications`.
-5.  **International SEO**: Fully mapped JSON-LD `Organization` schemas, `hreflang` translation alternate canonicals, dynamic `next/image` sizing logic, and GA4 integration natively linked into the Layout block.
+1.  **Immersive Dark Aesthetic**: Global scroll-reactive ambient glows and rigorous blueprint-style framing for data presentation.
+2.  **Multilingual Architecture**: Dynamic routing across `[locale]`, driven by deep translation matrices.
+3.  **Dynamic Mega Menu**: Complex 12-column architecture featuring bespoke sub-categories.
+4.  **Hierarchical Product Terminal**: A progressive catalog that transitions from visual cards to detailed technical specification views (`[model]`).
+5.  **International SEO**: Fully mapped JSON-LD `Organization` schemas, `hreflang` translation alternate canonicals, dynamic `next/image` sizing, and GA4 integration.
 
 ## Installation & Setup
 
@@ -54,4 +55,4 @@ npm run start
 ## Architectural Guidelines
 *   **Image Management**: Use only `<Image />` tags enforcing strict `sizes` and `fill` parameters to maintain LCP scores.
 *   **Routing**: All routes must be strictly wrapped within the `[locale]` dynamic routing parameter format `app/[locale]/...`.
-*   **Hover States**: Strictly enforce `.transition-all .duration-500` or higher to maintain the luxury, slow-moving aesthetic profile.
+*   **Hover States**: Enforce clear, responsive transition states to maintain a vibrant, modern aesthetic profile.

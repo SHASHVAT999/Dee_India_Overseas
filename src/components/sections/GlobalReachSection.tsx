@@ -13,7 +13,7 @@ export function GlobalReachSection() {
     ];
 
     return (
-        <section className="py-24 md:py-32 bg-surface-alt border-y border-stone-200">
+        <section className="py-32 md:py-48">
             <div className="max-w-container mx-auto px-6 md:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:items-center">
                     {/* Left Column Text & Counters */}
@@ -36,7 +36,7 @@ export function GlobalReachSection() {
                                 </p>
                                 <p className="text-[10px] uppercase font-semibold tracking-widest text-stone-400 mt-2">Countries</p>
                             </div>
-                            <div className="w-px h-16 bg-stone-200 hidden sm:block" />
+                            <div className="w-px h-16 bg-stone-800 hidden sm:block" />
                             <div>
                                 <p className="text-[3rem] leading-none tracking-tighter font-bold text-foreground">
                                     <AnimatedCounter value={6} />
@@ -44,7 +44,7 @@ export function GlobalReachSection() {
                                 </p>
                                 <p className="text-[10px] uppercase font-semibold tracking-widest text-stone-400 mt-2">Continents</p>
                             </div>
-                            <div className="w-px h-16 bg-stone-200 hidden sm:block" />
+                            <div className="w-px h-16 bg-stone-800 hidden sm:block" />
                             <div>
                                 <p className="text-[3rem] leading-none tracking-tighter font-bold text-foreground">
                                     <AnimatedCounter value={500} />
@@ -58,7 +58,7 @@ export function GlobalReachSection() {
                     {/* Right Column Map & Legend */}
                     <div className="flex flex-col relative pt-8 lg:pt-0">
                         {/* World Map Visualization */}
-                        <div className="flex-grow flex items-center justify-center p-8 bg-zinc-100/50 rounded-3xl border border-stone-200/60 mb-8 self-center w-full shadow-inner">
+                        <div className="flex-grow flex items-center justify-center p-8 bg-stone-800/50 rounded-3xl border border-stone-700/60 mb-8 self-center w-full shadow-inner">
                             <WorldMap />
                         </div>
 

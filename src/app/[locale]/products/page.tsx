@@ -6,9 +6,9 @@ export default function ProductsPage() {
     return (
         <main className="bg-background min-h-screen flex flex-col pt-24 pb-16 relative overflow-hidden">
             {/* Blueprint lines for depth */}
-            <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0 pointer-events-none" />
-            <div className="absolute top-0 right-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0 pointer-events-none" />
-            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-stone-200/20 z-0 pointer-events-none" />
+            <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-800/40 hidden lg:block z-0 pointer-events-none" />
+            <div className="absolute top-0 right-[10%] bottom-0 w-[1px] bg-stone-800/40 hidden lg:block z-0 pointer-events-none" />
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-stone-800/20 z-0 pointer-events-none" />
 
             {/* Header Content */}
             <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 relative z-10 pt-10 text-center flex flex-col items-center">
@@ -29,7 +29,7 @@ export default function ProductsPage() {
             </div>
 
             {/* Background Aesthetic Flourishes */}
-            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-stone-50 to-transparent z-0 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-stone-950 to-transparent z-0 pointer-events-none" />
         </main>
     );
 }

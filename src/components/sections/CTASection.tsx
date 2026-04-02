@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
     return (
-        <section className="py-24 md:py-32 bg-stone-900">
+        <section className="py-24 md:py-32">
             <div className="max-w-container mx-auto px-6 md:px-8 text-center">
                 <h2 className="text-h2 text-white mb-4">
                     Ready to Partner?

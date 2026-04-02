@@ -124,7 +124,7 @@ export const CATALOG_DATA: Category[] = [
             es: "Sistemas para Triciclos",
             zh: "三轮车系统"
         },
-        slug: "three-wheeler-systems",
+        slug: "three-wheeler-parts",
         description: {
             en: "Robust drivetrain and suspension components engineered for heavy-duty commercial utility.",
             es: "Componentes robustos de transmisión y suspensión diseñados para servicios comerciales pesados.",
@@ -153,7 +153,7 @@ export const CATALOG_DATA: Category[] = [
                                 name: { en: "Heavy Duty Rear Axle", es: "Eje trasero de servicio pesado", zh: "重型后桥" },
                                 slug: "heavy-duty-rear-axle-tvs-king",
                                 images: ["https://images.unsplash.com/photo-1569426989668-d06e2ec6f437?q=80&w=1000&auto=format&fit=crop"],
-                                category: "three-wheeler-systems",
+                                category: "three-wheeler-parts",
                                 brand: "tvs-tw",
                                 model: "tvs-king",
                                 featured: true
@@ -217,49 +217,62 @@ export const CATALOG_DATA: Category[] = [
         ]
     },
     {
-        id: "cat_tyres",
+        id: "cat_engine_valves",
         name: {
-            en: "Inner Tubes & Tyres",
-            es: "Cámaras y Neumáticos",
-            zh: "内胎和轮胎"
+            en: "Engine Valves",
+            es: "Válvulas de Motor",
+            zh: "发动机气门"
         },
-        slug: "inner-tubes-and-tyres",
+        slug: "engine-valves",
         description: {
-            en: "High-endurance rubber compounds for all-terrain global mobility.",
-            es: "Compuestos de caucho de alta resistencia para movilidad global todo terreno.",
-            zh: "适用于全地形全球出行的高耐用性橡胶混合物。"
+            en: "Precision-ground poppet valves and valve train components engineered for optimal combustion.",
+            es: "Válvulas de hongo rectificadas con precisión y componentes del tren de válvulas para una combustión óptima.",
+            zh: "精密研磨提升阀和配气机构零件，专为最佳燃烧效率设计。"
         },
         brands: [
             {
-                id: "brand_three_wheeler",
-                name: "Three Wheeler",
-                slug: "three-wheeler",
+                id: "brand_bajaj_ev",
+                name: "Bajaj",
+                slug: "bajaj-ev",
                 models: []
             },
             {
-                id: "brand_tubes",
-                name: "Tubes",
-                slug: "tubes",
+                id: "brand_yamaha_ev",
+                name: "Yamaha",
+                slug: "yamaha-ev",
                 models: [
                     {
-                        id: "mod_all",
+                        id: "mod_ev_all",
                         name: "All Models",
                         slug: "all-models",
-                        brand: "tubes",
+                        brand: "yamaha-ev",
                         products: [
                             {
-                                id: "prod_tube_butyl",
-                                name: { en: "Premium Butyl Inner Tube (17-inch)", es: "Tubo interior de butilo premium (17 pulgadas)", zh: "高级丁基内胎（17英寸）" },
-                                slug: "premium-butyl-inner-tube-17",
-                                images: ["https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1000&auto=format&fit=crop"],
-                                category: "inner-tubes-and-tyres",
-                                brand: "tubes",
+                                id: "prod_ev_titanium",
+                                name: { en: "Titanium Intake Valve Set", es: "Juego de válvulas de admisión de titanio", zh: "钛合金进气门组" },
+                                slug: "titanium-intake-valve-set",
+                                images: ["https://images.unsplash.com/photo-1486262715619-679ce42fb928?q=80&w=1000&auto=format&fit=crop"],
+                                category: "engine-valves",
+                                brand: "yamaha-ev",
                                 model: "all-models",
-                                featured: false
+                                specifications: { "Material": "Grade 5 Titanium", "Weight": "12g", "Tolerance": "±0.002mm" },
+                                featured: true
                             }
                         ]
                     }
                 ]
+            },
+            {
+                id: "brand_tvs_ev",
+                name: "TVS",
+                slug: "tvs-ev",
+                models: []
+            },
+            {
+                id: "brand_hero_ev",
+                name: "Hero",
+                slug: "hero-ev",
+                models: []
             }
         ]
     }

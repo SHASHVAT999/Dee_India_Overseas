@@ -31,5 +31,5 @@ export function AnimatedCounter({ value, className }: AnimatedCounterProps) {
         });
     }, [springValue]);
 
-    return <span ref={ref} className={className} />;
+    return <span ref={ref} className={className}>0</span>;
 }

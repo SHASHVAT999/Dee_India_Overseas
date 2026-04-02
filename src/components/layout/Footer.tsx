@@ -17,11 +17,11 @@ export function Footer() {
         { name: "Motorcycle Parts", href: "/products/motorcycle-parts" },
         { name: "Three Wheeler Parts", href: "/products/three-wheeler-parts" },
         { name: "Scooter Parts", href: "/products/scooter-parts" },
-        { name: "Tyres", href: "/products/tyres" },
+        { name: "Engine Valves", href: "/products/engine-valves" },
     ];
 
     return (
-        <footer className="bg-stone-50 border-t border-stone-200">
+        <footer className="bg-stone-900 border-t border-stone-800">
             <div className="max-w-container mx-auto px-6 md:px-8 py-16 md:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {/* Brand */}
@@ -106,7 +106,7 @@ export function Footer() {
             </div>
 
             {/* Bottom bar */}
-            <div className="border-t border-stone-200">
+            <div className="border-t border-stone-800">
                 <div className="max-w-container mx-auto px-6 md:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-stone-400">
                         © {currentYear} Dee India Overseas. All rights reserved.

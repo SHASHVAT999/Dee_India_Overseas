@@ -28,7 +28,7 @@ export default function ContactPage() {
             </section>
 
             {/* Form + Info */}
-            <section className="py-24 md:py-32 bg-white border-t border-stone-100">
+            <section className="py-24 md:py-32 bg-stone-900/40 backdrop-blur-md border-y border-stone-800 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
                         {/* Form */}
@@ -36,9 +36,9 @@ export default function ContactPage() {
                             <h2 className="text-h3 text-foreground mb-8">Send an Inquiry</h2>
 
                             {submitted ? (
-                                <div className="bg-stone-50 rounded-xl p-8 text-center">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center mx-auto mb-4">
-                                        <Send size={20} className="text-emerald-600" />
+                                <div className="bg-stone-800/50 rounded-xl p-8 text-center border border-stone-700">
+                                    <div className="w-12 h-12 rounded-full bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
+                                        <Send size={20} className="text-emerald-400" />
                                     </div>
                                     <h3 className="text-lg font-semibold text-foreground mb-2">Message Sent</h3>
                                     <p className="text-sm text-stone-500">We&apos;ll get back to you within 24 hours.</p>
@@ -51,7 +51,7 @@ export default function ContactPage() {
                                             <input
                                                 type="text"
                                                 required
-                                                className="w-full px-4 py-3 text-sm bg-white border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-shadow"
+                                                className="w-full px-4 py-3 text-sm bg-stone-800 border border-stone-700 text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                                                 placeholder="Your name"
                                             />
                                         </div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
                                             <label className="block text-sm font-medium text-foreground mb-2">Company</label>
                                             <input
                                                 type="text"
-                                                className="w-full px-4 py-3 text-sm bg-white border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-shadow"
+                                                className="w-full px-4 py-3 text-sm bg-stone-800 border border-stone-700 text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                                                 placeholder="Company name"
                                             />
                                         </div>
@@ -69,14 +69,14 @@ export default function ContactPage() {
                                         <input
                                             type="email"
                                             required
-                                            className="w-full px-4 py-3 text-sm bg-white border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-shadow"
+                                            className="w-full px-4 py-3 text-sm bg-stone-800 border border-stone-700 text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                                             placeholder="your@email.com"
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium text-foreground mb-2">Product Interest</label>
-                                        <select className="w-full px-4 py-3 text-sm bg-white border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-shadow text-stone-600">
-                                            <option value="">Select a category</option>
+                                        <select className="w-full px-4 py-3 text-sm bg-stone-800 border border-stone-700 text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow">
+                                            <option value="" className="text-stone-500">Select a category</option>
                                             <option>Engine Valves</option>
                                             <option>Clutch Parts</option>
                                             <option>Brake Systems</option>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                                         <textarea
                                             rows={5}
                                             required
-                                            className="w-full px-4 py-3 text-sm bg-white border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-shadow resize-none"
+                                            className="w-full px-4 py-3 text-sm bg-stone-800 border border-stone-700 text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow resize-none"
                                             placeholder="Tell us about your requirements..."
                                         />
                                     </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* Map */}
-                            <div className="mt-10 rounded-xl overflow-hidden border border-stone-200">
+                            <div className="mt-10 rounded-xl overflow-hidden border border-stone-700/50">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.469659372!2d70.7774!3d22.2883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE3JzE4LjAiTiA3MMKwNDYnMzguNiJF!5e0!3m2!1sen!2sin!4v1234567890"
                                     width="100%"

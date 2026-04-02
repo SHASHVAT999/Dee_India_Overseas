@@ -42,16 +42,16 @@ export default function QualityPage() {
             </section>
 
             {/* Quality Steps */}
-            <section className="py-24 md:py-32 bg-white border-t border-stone-100">
+            <section className="py-24 md:py-32 bg-stone-900/40 backdrop-blur-md border-y border-stone-800 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {steps.map((step, i) => (
                             <div
                                 key={i}
-                                className="bg-stone-50 rounded-xl p-8 md:p-10 hover:shadow-md transition-shadow duration-300"
+                                className="bg-stone-800/50 rounded-xl p-8 md:p-10 hover:shadow-md hover:bg-stone-800 transition-all duration-300 border border-transparent hover:border-stone-700"
                             >
                                 <div className="flex items-center gap-4 mb-5">
-                                    <div className="text-stone-400">{step.icon}</div>
+                                    <div className="text-accent">{step.icon}</div>
                                     <span className="text-xs font-medium text-stone-400 uppercase tracking-wider">
                                         Step {String(i + 1).padStart(2, "0")}
                                     </span>

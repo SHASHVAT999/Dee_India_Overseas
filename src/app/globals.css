@@ -4,47 +4,50 @@
 
 @layer base {
   :root {
+    /* ─── Dark Theme ─────────────────────────────── */
+
     /* Surfaces */
-    --background: 210 20% 98%;
-    /* slate-50 - very light industrial cool tone */
-    --surface: 0 0% 100%;
-    /* #FFFFFF */
-    --surface-alt: 215 16% 92%;
-    /* slate-200 - distinct cool grey */
+    --background: 24 9% 10%;
+    /* stone-900 #1c1917 */
+    --surface: 24 7% 15%;
+    /* stone-800 #292524 */
+    --surface-alt: 24 9% 10%;
+    /* unified with background — stone-900 */
 
     /* Text */
-    --foreground: 24 10% 10%;
-    /* #1C1917 */
-    --text-secondary: 25 5% 45%;
-    /* #78716C */
-    --text-tertiary: 25 5% 64%;
-    /* #A8A29E */
+    --foreground: 60 9% 96%;
+    /* warm near-white #fafaf9 */
+    --text-secondary: 24 6% 65%;
+    /* stone-400 #a8a29e */
+    --text-tertiary: 24 5% 50%;
+    /* stone-500 #78716c */
 
     /* Brand */
     --accent: 0 74% 42%;
     /* #B91C1C */
     --accent-hover: 0 74% 35%;
     /* #991B1B */
-    --accent-soft: 0 86% 97%;
-    /* #FEF2F2 */
+    --accent-soft: 0 86% 12%;
+    /* dark red tint */
 
     /* Borders */
-    --border: 24 6% 90%;
-    /* #E7E5E4 */
-    --border-subtle: 60 5% 96%;
-    /* #F5F5F4 */
+    --border: 22 6% 22%;
+    /* stone-700 #44403c */
+    --border-subtle: 24 7% 17%;
+    /* stone-800 */
 
-    /* Dark surfaces */
-    --dark: 24 10% 10%;
-    /* #1C1917 */
-    --dark-surface: 24 6% 15%;
-    /* #292524 */
+    /* Dark surfaces (used in explicit dark cards) */
+    --dark: 24 9% 7%;
+    /* very deep */
+    --dark-surface: 24 7% 15%;
+    /* stone-800 */
 
     /* Radius */
     --radius: 0.5rem;
 
     /* Ring */
-    --ring: 24 10% 10%;
+    --ring: 0 74% 42%;
+    /* accent red ring */
   }
 
   * {
@@ -62,7 +65,7 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* Subtle scrollbar — appears on hover only */
+  /* Subtle scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -82,19 +85,20 @@
 }
 
 @layer components {
+  /* Dark glass */
   .glass {
     @apply backdrop-blur-xl border;
-    background: rgba(255, 255, 255, 0.72);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(28, 25, 23, 0.75);
+    border-color: rgba(68, 64, 60, 0.4);
   }
 
   .glass-strong {
     @apply backdrop-blur-2xl border;
-    background: rgba(255, 255, 255, 0.88);
-    border-color: rgba(228, 228, 231, 0.5);
+    background: rgba(28, 25, 23, 0.92);
+    border-color: rgba(68, 64, 60, 0.5);
   }
 
-  /* Subtle noise texture to break the digital white feel */
+  /* Subtle noise texture */
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
   }
@@ -108,8 +112,8 @@
 
 /* Selection color */
 ::selection {
-  background: hsl(0 74% 42% / 0.12);
-  color: #1C1917;
+  background: hsl(0 74% 42% / 0.25);
+  color: #fafaf9;
 }
 
 /* Focus ring */

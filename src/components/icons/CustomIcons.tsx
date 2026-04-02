@@ -54,25 +54,35 @@ export function MotorScooterIcon(props: LucideProps) {
             {...props}
         >
             {/* Front Wheel */}
-            <circle cx="5" cy="15" r="3" />
+            <circle cx="5.5" cy="15" r="3" />
             {/* Rear Wheel */}
-            <circle cx="19" cy="15" r="3" />
-            {/* Front Panel and Steering */}
-            <path d="M5 12L7 3h3" />
-            {/* Handlebar & Headlight Area */}
-            <path d="M10 3l-1-2" />
-            <circle cx="10" cy="2" r="1" />
+            <circle cx="19.5" cy="15" r="3" />
+
             {/* Floorboard */}
-            <path d="M7 12h6" />
-            {/* Body Rear Curve */}
-            <path d="M13 12v-5h4a2 2 0 0 1 2 2v3" />
+            <path d="M16 14 h -5" />
+
+            {/* Front Fork */}
+            <path d="M5.5 15 l 2.5 -8" />
+            
+            {/* Front Shield */}
+            <path d="M8 7 l 3 7" />
+
+            {/* Handlebar */}
+            <path d="M8 7 l 2 -0.5 h 1.5" />
+
+            {/* Headlight / Console */}
+            <path d="M8 7 l -0.5 -2 h -1.5 a 1 1 0 0 0 -1 1 v 1 h 3" />
+
+            {/* Rear Cowl / Engine */}
+            <path d="M16 14 L 15.5 7.5 h 5 l 2 4.5 l -3 3" />
+
             {/* Seat */}
-            <path d="M12 7h6" />
+            <path d="M20.5 7.5 c 0 -2 -5 -2 -6 0 z" />
         </svg>
     );
 }
 
-export function SolidTyreIcon(props: LucideProps) {
+export function EngineValveIcon(props: LucideProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,12 +96,12 @@ export function SolidTyreIcon(props: LucideProps) {
             strokeLinejoin="round"
             {...props}
         >
-            {/* Outer Edge */}
-            <circle cx="12" cy="12" r="10" />
-            {/* Hub */}
-            <circle cx="12" cy="12" r="4" />
-            {/* Inner Rim/Tread dashed */}
-            <circle cx="12" cy="12" r="7" strokeDasharray="3 3" />
+            {/* Poppet valve — single closed outline path */}
+            {/* Head face → right edge of head → taper to stem → down stem → tip → up left stem → taper back to head */}
+            <path d="M2 5 H22 V7 C22 9 15 10 13 11.5 V20 H11 V11.5 C9 10 2 9 2 7 Z" />
+            {/* Keeper groove (split keeper region) */}
+            <line x1="10.5" y1="16" x2="13.5" y2="16" />
+            <line x1="10.5" y1="17.5" x2="13.5" y2="17.5" />
         </svg>
     );
 }
@@ -136,3 +146,38 @@ export function MotorcycleIcon(props: LucideProps) {
         </svg>
     );
 }
+
+export function TruckIcon(props: LucideProps) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={props.strokeWidth || 2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            {...props}
+        >
+            {/* Wheels */}
+            <circle cx="18" cy="15" r="2.5" />
+            <circle cx="7" cy="15" r="2.5" />
+            <circle cx="12" cy="15" r="2.5" />
+
+            {/* Cab */}
+            <path d="M14 6h4l3 5v4" />
+            
+            {/* Chassis */}
+            <path d="M22 15h-1.5m-5 0h-1m-4 0H2" />
+            
+            {/* Trailer/Bed */}
+            <path d="M14 15V7 M2 15V7h12" />
+            
+            {/* Window */}
+            <path d="M15 7h3l2 3h-5z" />
+        </svg>
+    );
+}
+

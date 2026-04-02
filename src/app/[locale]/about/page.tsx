@@ -23,7 +23,7 @@ export default function AboutPage() {
             </section>
 
             {/* Story */}
-            <section className="py-24 md:py-32 bg-white border-t border-stone-100">
+            <section className="py-24 md:py-32 bg-stone-900/40 backdrop-blur-md border-y border-stone-800 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -38,10 +38,10 @@ export default function AboutPage() {
                                 Our product range spans engine valves, clutch assemblies, brake systems, inner tubes, and suspension components for motorcycles, three-wheelers, and commercial vehicles, serving OEMs and aftermarket distributors across the globe.
                             </p>
                         </div>
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
+                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-800">
                             <div className="absolute inset-0 flex items-center justify-center text-stone-300">
                                 <div className="text-center">
-                                    <div className="w-16 h-16 rounded-full bg-stone-200 mx-auto mb-3" />
+                                    <div className="w-16 h-16 rounded-full bg-stone-700 mx-auto mb-3" />
                                     <p className="text-sm">Factory Image</p>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="py-24 md:py-32 bg-surface-alt border-t border-stone-100">
+            <section className="py-24 md:py-32 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8">
                     <h2 className="text-h2 text-foreground mb-4">What Drives Us</h2>
                     <p className="text-stone-500 mb-16 max-w-lg">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                         {values.map((v, i) => (
                             <div key={i}>
-                                <div className="text-stone-400 mb-4">{v.icon}</div>
+                                <div className="text-accent mb-4">{v.icon}</div>
                                 <h3 className="text-sm font-semibold text-foreground mb-2">{v.title}</h3>
                                 <p className="text-sm text-stone-500 leading-relaxed">{v.desc}</p>
                             </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </section>
 
             {/* Vision */}
-            <section className="py-24 md:py-32 bg-white border-t border-stone-100">
+            <section className="py-24 md:py-32 bg-stone-900/40 backdrop-blur-md border-y border-stone-800 relative z-10">
                 <div className="max-w-container mx-auto px-6 md:px-8 max-w-3xl text-center">
                     <h2 className="text-h2 text-foreground mb-6">Our Vision</h2>
                     <p className="text-lg text-stone-500 leading-relaxed">

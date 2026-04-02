@@ -2,11 +2,14 @@
 
 import { Link } from "@/i18n/routing";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { RickshawIcon, MotorScooterIcon, SolidTyreIcon, MotorcycleIcon } from "@/components/icons/CustomIcons";
+import { RickshawIcon, MotorScooterIcon, EngineValveIcon, MotorcycleIcon, TruckIcon } from "@/components/icons/CustomIcons";
 import { ValuesSection } from "@/components/sections/ValuesSection";
+import { motion } from "framer-motion";
 import { GlobalReachSection } from "@/components/sections/GlobalReachSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { CADMotorcycleGraphic, CADScooterGraphic, CADRickshawGraphic, CADTruckGraphic } from "@/components/ui/CADVehicleGraphics";
+import { cn } from "@/lib/utils";
 
 const stats = [
     { value: "40+", label: "Years Experience" },
@@ -15,63 +18,129 @@ const stats = [
 ];
 
 const categories = [
-    { title: "Motorcycle Parts", href: "/products/motorcycle-parts", Icon: MotorcycleIcon },
+    { title: "Motorcycle Parts", href: "/products/motorcycle-parts", Icon: MotorcycleIcon, bgIconClass: "w-[250px] h-[250px] md:w-[400px] md:h-[400px]" },
     { title: "Three Wheeler Parts", href: "/products/three-wheeler-parts", Icon: RickshawIcon },
-    { title: "Scooter Parts", href: "/products/scooter-parts", Icon: MotorScooterIcon },
-    { title: "Tyres", href: "/products/tyres", Icon: SolidTyreIcon },
+    { title: "Scooter Parts", href: "/products/scooter-parts", Icon: MotorScooterIcon, bgIconClass: "w-[220px] h-[220px] md:w-[380px] md:h-[380px]" },
+    { title: "Engine Valves", href: "/products/engine-valves", Icon: EngineValveIcon, bgIconClass: "w-[180px] h-[180px] md:w-[300px] md:h-[300px]", bgStrokeWidth: 0.8 },
 ];
 
 export default function HomePage() {
     return (
-        <main className="bg-background selection:bg-stone-900 selection:text-white">
+        <main>
+            {/* HERO */}
+            <section className="h-screen min-h-[680px] flex flex-col items-center justify-center pt-32 pb-16 relative overflow-hidden">
+                
+                {/* Deep Edge Vignette */}
+                <div className="absolute inset-0 z-[2] pointer-events-none shadow-[inset_0_0_180px_rgba(0,0,0,0.7)]" />
 
-            {/* HERO: Structural Typography */}
-            <section className="min-h-[90vh] flex flex-col justify-end pt-32 pb-16 px-6 md:px-12 relative overflow-hidden">
-                {/* Abstract technical lines (Blueprint style) */}
-                <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0" />
-                <div className="absolute top-0 left-[40%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0" />
 
-                <div className="relative z-10 w-full max-w-[1600px] mx-auto">
-                    {/* Top small label */}
-                    <div className="flex items-center gap-6 mb-16 md:mb-24">
-                        <div className="w-12 h-[1px] bg-accent" />
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-medium">B2B Automotive Exports</span>
+
+                {/* Main Responsive Flex Container */}
+                <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 md:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
+                    
+                    {/* LEFT FLANK: Scooter & Tuk Tuk */}
+                    <div className="hidden lg:flex flex-col items-end justify-center gap-12 xl:gap-20 relative z-10 w-[25%] lg:w-[28%] xl:w-[25%] pr-4 md:pr-8">
+                        <motion.div 
+                            initial={{ x: -50, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, y: [0, -10, 0] }}
+                            transition={{ opacity: { duration: 1, delay: 0.4 }, x: { duration: 1.2, delay: 0.4, ease: "easeOut" }, y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+                            className="w-[95%]"
+                        >
+                            <CADScooterGraphic className="w-full h-auto scale-x-[-1]" />
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ x: -50, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, y: [0, -8, 0] }}
+                            transition={{ opacity: { duration: 1, delay: 0.6 }, x: { duration: 1.2, delay: 0.6, ease: "easeOut" }, y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
+                            className="w-[105%]"
+                        >
+                            <CADRickshawGraphic className="w-full h-auto scale-x-[-1]" />
+                        </motion.div>
                     </div>
 
-                    {/* Massive Typography */}
-                    <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] xl:text-[11rem] leading-[0.85] tracking-tighter font-bold text-foreground text-balance">
-                        PRECISION<br />
-                        <span className="text-stone-300">ENGINEERED<span className="text-accent">.</span></span>
-                    </h1>
+                    {/* CENTRAL COLUMN: Typography */}
+                    <div className="flex flex-col items-center text-center px-2 w-full lg:w-[44%] xl:w-[50%] relative z-20">
+                        {/* Top Label */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="flex items-center gap-4 mb-6"
+                        >
+                            <div className="w-8 h-[2px] bg-accent" />
+                            <span className="text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-stone-400 whitespace-nowrap">Precision Engineered</span>
+                            <div className="w-8 h-[2px] bg-accent" />
+                        </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 gap-12 border-t border-stone-200 pt-8">
-                        <div className="md:col-span-4 lg:col-span-5">
-                            <p className="text-sm text-stone-500 leading-relaxed font-medium uppercase tracking-widest max-w-[300px]">
-                                Established in 1985 in Rajkot, India. Dedicated to manufacturing OEM-grade components.
-                            </p>
-                        </div>
-                        <div className="md:col-span-8 lg:col-span-7 flex flex-col sm:flex-row gap-6 md:items-center md:justify-end">
-                            <Link href="/products" className="group inline-flex items-center justify-between gap-8 px-8 py-5 bg-stone-900 text-white hover:bg-stone-800 transition-colors">
-                                <span className="text-xs uppercase tracking-[0.15em] font-semibold">View Capabilities</span>
+                        {/* Central Typography */}
+                        <motion.h1
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                            className="text-[2.5rem] sm:text-[3.8rem] md:text-[5rem] lg:text-[4vw] xl:text-[4.8vw] 2xl:text-[5.5vw] leading-[0.85] tracking-tight font-extrabold text-white text-balance"
+                        >
+                            WELCOME TO<br />
+                            <span className="text-accent drop-shadow-sm">DEE INDIA</span><br />
+                            OVERSEAS
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.6 }}
+                            className="mt-8 text-stone-400 font-medium uppercase tracking-[0.15em] text-xs md:text-sm max-w-[500px] text-balance"
+                        >
+                            Manufacturing OEM-Grade Components Since 1985
+                        </motion.p>
+                        
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.8 }}
+                            className="mt-10 flex flex-col sm:flex-row gap-6"
+                        >
+                            <Link href="/products" className="group inline-flex items-center justify-center gap-4 px-8 py-4 bg-accent text-white hover:bg-stone-800 transition-colors shadow-2xl shadow-red-900/10 rounded-sm">
+                                <span className="text-xs uppercase tracking-[0.2em] font-bold">View Capabilities</span>
                                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link href="/contact" className="group inline-flex items-center justify-between gap-8 px-8 py-5 border border-stone-200 text-stone-900 hover:bg-stone-50 transition-colors bg-white">
-                                <span className="text-xs uppercase tracking-[0.15em] font-semibold">Contact Us</span>
-                                <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            </Link>
-                        </div>
+                        </motion.div>
                     </div>
+
+                    {/* RIGHT FLANK: Truck & Motorcycle */}
+                    <div className="hidden lg:flex flex-col items-start justify-center gap-16 xl:gap-24 relative z-10 w-[25%] lg:w-[28%] xl:w-[25%] pl-4 md:pl-8">
+                        <motion.div 
+                            initial={{ x: 50, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, y: [0, -10, 0] }}
+                            transition={{ opacity: { duration: 1, delay: 0.5 }, x: { duration: 1.2, delay: 0.5, ease: "easeOut" }, y: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }}
+                            className="w-[105%]"
+                        >
+                            <CADTruckGraphic className="w-full h-auto" />
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ x: 50, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, y: [0, -15, 0] }}
+                            transition={{ opacity: { duration: 1, delay: 0.7 }, x: { duration: 1.2, delay: 0.7, ease: "easeOut" }, y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }}
+                            className="w-[95%]"
+                        >
+                            <CADMotorcycleGraphic className="w-full h-auto" />
+                        </motion.div>
+                    </div>
+
                 </div>
             </section>
 
-            {/* SPLIT SCREEN ABOUT */}
-            <section className="border-t border-stone-200 bg-surface-alt bg-noise">
-                <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+            {/* ABOUT — DARK */}
+            <section className="relative overflow-clip">
+
+
+                <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {/* Sticky Left: Title */}
-                        <div className="py-24 lg:py-48 lg:border-r border-stone-200 lg:pr-24 relative">
+                        <div className="py-24 lg:py-48 lg:border-r border-stone-700 lg:pr-24 relative">
                             <div className="lg:sticky lg:top-48">
-                                <h2 className="text-[3rem] sm:text-[4.5rem] leading-[0.9] tracking-tighter font-bold text-foreground">
+                                <h2 className="text-[3rem] sm:text-[4.5rem] leading-[0.9] tracking-tighter font-bold text-white">
                                     FOUR<br />
                                     DECADES<br />
                                     OF<br />
@@ -82,27 +151,27 @@ export default function HomePage() {
 
                         {/* Scrolling Right: Content */}
                         <div className="py-12 lg:py-48 lg:pl-24">
-                            <h3 className="text-xl md:text-3xl font-medium text-foreground leading-snug mb-12 max-w-xl">
+                            <h3 className="text-xl md:text-3xl font-medium text-stone-200 leading-snug mb-12 max-w-xl">
                                 Dee India Overseas laid its foundation stone with sheer determination and excellence-driven passion, focusing solely on strict tolerance automotive parts.
                             </h3>
 
-                            <p className="text-stone-500 leading-relaxed max-w-xl mb-16 text-lg">
+                            <p className="text-stone-400 leading-relaxed max-w-xl mb-16 text-lg">
                                 Located in Rajkot, Gujarat — the heart of India&apos;s engineering belt — we have built an unyielding reputation for producing high-tolerance components that consistently meet international OEM standards.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 border-t border-stone-200 pt-16">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 border-t border-stone-700 pt-16">
                                 {stats.map((stat, i) => (
                                     <div key={i}>
-                                        <p className="text-[3rem] leading-none tracking-tighter font-semibold text-foreground mb-4 flex items-center">
+                                        <p className="text-[3rem] leading-none tracking-tighter font-semibold text-white mb-4 flex items-center">
                                             <AnimatedCounter value={parseInt(stat.value, 10)} />
                                             <span className="text-accent">+</span>
                                         </p>
-                                        <p className="text-[10px] uppercase font-semibold tracking-widest text-stone-400">{stat.label}</p>
+                                        <p className="text-[10px] uppercase font-semibold tracking-widest text-stone-500">{stat.label}</p>
                                     </div>
                                 ))}
                             </div>
 
-                            <Link href="/about" className="inline-flex mt-20 items-center gap-4 text-xs font-bold uppercase tracking-[0.15em] text-accent hover:text-stone-900 transition-colors group">
+                            <Link href="/about" className="inline-flex mt-20 items-center gap-4 text-xs font-bold uppercase tracking-[0.15em] text-accent hover:text-white transition-colors group">
                                 Read our full history <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
@@ -110,10 +179,15 @@ export default function HomePage() {
                 </div>
             </section>
 
+            {/* SEPARATOR */}
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+                <div className="w-full h-[2px] bg-stone-700/80" />
+            </div>
+
             {/* STRUCTURAL CAPABILITIES LIST (Replaces Bento Grid) */}
-            <section className="bg-background border-t border-stone-200 py-24 md:py-40 relative">
+            <section className="pt-24 md:pt-40 pb-0 relative">
                 {/* Blueprint line */}
-                <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-200/40 hidden lg:block z-0 pointer-events-none" />
+                <div className="absolute top-0 left-[10%] bottom-0 w-[1px] bg-stone-800/40 hidden lg:block z-0 pointer-events-none" />
 
                 <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
@@ -126,16 +200,19 @@ export default function HomePage() {
                         </p>
                     </div>
 
-                    <div className="border-t border-stone-200">
+                    <div className="border-t border-stone-800">
                         {categories.map((cat, i) => (
                             <Link
                                 href={cat.href}
                                 key={cat.title}
-                                className="group relative flex flex-col md:flex-row md:items-center justify-between py-12 md:py-16 border-b border-stone-200 hover:bg-stone-50 transition-colors px-6 -mx-6 md:px-12 md:-mx-12 cursor-pointer overflow-hidden"
+                                className="group relative flex flex-col md:flex-row md:items-center justify-between py-12 md:py-16 border-b border-stone-800 hover:bg-stone-800/50 transition-colors px-6 -mx-6 md:px-12 md:-mx-12 cursor-pointer overflow-hidden"
                             >
                                 {/* Abstract Line Drawing Background */}
                                 <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-5 group-hover:opacity-10 transition-all duration-700 pointer-events-none z-0">
-                                    <cat.Icon strokeWidth={0.5} className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] text-stone-900 translate-x-[20%] group-hover:translate-x-[15%] scale-x-[-1] transition-transform duration-700" />
+                                    <cat.Icon strokeWidth={("bgStrokeWidth" in cat ? cat.bgStrokeWidth as number : 0.5)} className={cn(
+                                        "bgIconClass" in cat ? cat.bgIconClass as string : "w-[300px] h-[300px] md:w-[500px] md:h-[500px]",
+                                        "text-white translate-x-[20%] group-hover:translate-x-[15%] scale-x-[-1] transition-transform duration-700"
+                                    )} />
                                 </div>
 
                                 <div className="relative z-10 flex items-center gap-6 md:gap-16 mb-6 md:mb-0">
@@ -145,9 +222,9 @@ export default function HomePage() {
                                     </h3>
                                 </div>
                                 <div className="relative z-10 flex items-center gap-6 mt-4 md:mt-0">
-                                    <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-stone-400 group-hover:text-stone-900 transition-colors">Explore</span>
-                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-stone-200 flex items-center justify-center bg-white group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-300">
-                                        <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" />
+                                    <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-stone-500 group-hover:text-white transition-colors">Explore</span>
+                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-stone-700 flex items-center justify-center bg-stone-900 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-300">
+                                        <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 text-stone-400 group-hover:text-white transition-colors" />
                                     </div>
                                 </div>
                             </Link>
@@ -156,11 +233,16 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Values */}
-            <ValuesSection />
+            {/* Values — commented out for future use */}
+            {/* <ValuesSection /> */}
 
             {/* Global Reach */}
             <GlobalReachSection />
+
+            {/* SEPARATOR */}
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+                <div className="w-full h-[2px] bg-stone-700/80" />
+            </div>
 
             {/* CTA */}
             <CTASection />
