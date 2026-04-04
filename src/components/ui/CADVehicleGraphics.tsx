@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface VehicleGraphicProps extends React.SVGProps<SVGSVGElement> {}
+type VehicleGraphicProps = React.SVGProps<SVGSVGElement>;
 
 // ═══════════════════════════════════════════════════════════════
 // 1. Commuter Motorcycle - CAD Wireframe

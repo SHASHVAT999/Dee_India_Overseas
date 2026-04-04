@@ -2,8 +2,7 @@
 
 import { Link } from "@/i18n/routing";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { RickshawIcon, MotorScooterIcon, EngineValveIcon, MotorcycleIcon, TruckIcon } from "@/components/icons/CustomIcons";
-import { ValuesSection } from "@/components/sections/ValuesSection";
+import { RickshawIcon, MotorScooterIcon, EngineValveIcon, MotorcycleIcon } from "@/components/icons/CustomIcons";
 import { motion } from "framer-motion";
 import { GlobalReachSection } from "@/components/sections/GlobalReachSection";
 import { CTASection } from "@/components/sections/CTASection";
